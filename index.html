@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Animater Regirtration Form</title>
+	<link rel="icon" type="image" href="images/icon.png">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<form>
+		<h2>New Account</h2>
+		<div class="inputbox">
+			<input type="text" required>
+			<label for="">User Name</label>
+		</div>
+		<div class="inputbox">
+			<input type="Email" required>
+			<label for="">Email</label>
+		</div>
+		<div class="inputbox">
+			<input type="Password" required>
+			<label for="">Create &nbsp Password</label>
+		</div>
+		<div class="inputbox">
+			<input type="Password" required>
+			<label for="">Confirm &nbsp Password</label>
+		</div>
+		<div class="inputbox">
+			<input type="Submit" value="Create">
+		</div>
+		<p>Already have an account? <a href="#">Login</a></p>
+	</form>
+	<script>
+		let label = document.querySelectorAll('label').forEach(label => {
+			label.innerHTML = label.innerText.split('').map((Letters, i) => `<span style="transition-delay: ${i*50}ms">${Letters}</span>`).join('');
+		});
+
+	</script>
+
+</body>
+</html>
